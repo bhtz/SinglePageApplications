@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app="todoApp">
+  <head>
+    <title>AngularJS TODO APP</title>
+	<title>TodoAngular</title>
+
+	<%= stylesheet_link_tag "bootstrap.css", "app.css" %>
+	<%= csrf_meta_tags %>
+  </head>
+  <body>
+
+  		<div class="container">
+
+	  	    <div class="navbar navbar-inverse">
+				<div class="navbar-inner">
+					<a class="brand" href="#">AngularJS Todo app</a>
+					<ul class="nav">
+						<li><a href="#docs/">Docs</a></li>
+						<li><a href="#aboutModal" data-toggle="modal">About</a></li>
+					</ul>
+				</div>
+	    	</div>
+
+	    	<div class="hero-unit">
+				<h1>AngularJS rocks !!!</h1>
+				<p class="text-info">Another todo app with angularjs & Ruby On Rails api</p>
+				<a href="http://angularjs.org/" class="btn btn-large btn-danger">See website</a>
+			</div>
+
+			<%= yield %>
+
+    	</div>
+
+    	<div id="aboutModal" class="modal hide fade" tabindex="-1" role="dialog">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				<h3 id="myModalLabel">About</h3>
+			</div>
+			<div class="modal-body">
+				<p>AngularJS todo application - Almerys - Orange Business Service 2013</p>
+			</div>
+			<div class="modal-footer">
+				<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+			</div>
+		</div>
+
+		<%= javascript_include_tag "vendors/angular.min.js", "vendors/jquery.js", "vendors/bootstrap.min.js" %>
+		<%= javascript_include_tag "app.js", "router.js" %>
+		<%= javascript_include_tag "controllers/todoController.js", "controllers/docsController.js" %>
+		<%= javascript_include_tag "services/todoService.js" %>
+  </body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BackboneJS TODO APP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/styles/app.css' />
+    <link rel='stylesheet' href='/styles/bootstrap.css' />
+  </head>
+  <body>
+
+  		<div class="container">
+
+	  	    <div class="navbar navbar-inverse">
+				<div class="navbar-inner">
+					<a class="brand" href="#">BackboneJS Todo app</a>
+					<ul class="nav">
+						<li><a href="#docs/">Docs</a></li>
+						<li><a href="#aboutModal" data-toggle="modal">About</a></li>
+					</ul>
+				</div>
+	    	</div>
+
+	    	<div class="hero-unit">
+				<h1>BackboneJS rocks !!!</h1>
+				<p class="text-info">Another todo app with backbonejs & nodejs api</p>
+				<a href="http://backbonejs.org/" class="btn btn-large btn-danger">See website</a>
+			</div>
+
+			<div class="viewContainer"></div>
+
+    	</div>
+
+    	<div id="aboutModal" class="modal hide fade" tabindex="-1" role="dialog">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				<h3 id="myModalLabel">About</h3>
+			</div>
+			<div class="modal-body">
+				<p>BackboneJS todo application - Almerys - Orange Business Service 2013</p>
+			</div>
+			<div class="modal-footer">
+				<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+			</div>
+		</div>
+
+		<!-- templates -->
+		<script id="todo-listing-template" type="text/x-handlebars-template">
+			<div class="btn-group pull-left">
+				<button id="allTodoButton" class="btn btn-primary">Get All</button>
+				<button id="doneTodoButton" class="btn btn-warning">Get Done</button>
+				<button id="completeAllButton" class="btn btn-info">Mark all as done</button>
+			</div>
+
+			<form class="form-inline pull-right" id="todoForm">
+				<input type="text" placeholder="what do you want to do ?" id="newTodoInput">
+				<input type="submit" class="btn btn-success" value="Add new todo">
+			</form>
+
+			<div class="clear"></div>
+
+    		<table class="table table-striped table-hover table-bordered">
+    			<thead>
+    				<tr class="graybg">
+    					<td>Title</td>
+    					<td>Done</td>
+    					<td>Action</td>
+    				</tr>
+    			</thead>
+    			<tbody id="todo-listing"></tbody>
+    		</table>
+    	</script>
+
+    	<script id="todo-item-template" type="text/x-handlebars-template">
+			<td>{{title}}</td>
+			<td><input class="todo-item-toggler" type="checkbox" {{#if done}}checked="checked"{{/if}}></td>
+			<td><button class="btn btn-danger" role="deleteButton">delete</button></td>
+		</script>
+
+		<script id="docs-template" type="text/x-handlebars-template">
+			<h1>Documentation</h1>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+		</script>
+
+		<!-- vendors -->
+    	<script src="/scripts/vendors/jquery.js"></script>
+    	<script src="/scripts/vendors/bootstrap.min.js"></script>
+  		<script src="/scripts/vendors/underscore.js"></script>
+  		<script src="/scripts/vendors/handlebars.js"></script>
+  		<script src="/scripts/vendors/backbone.js"></script>
+
+		<!-- librairies -->
+		<script src="/scripts/routers/router.js"></script>
+		<script src="/scripts/models/todo.js"></script>
+		<script src="/scripts/collections/todoCollection.js"></script>
+		<script src="/scripts/views/appView.js"></script>
+		<script src="/scripts/views/docsView.js"></script>
+		<script src="/scripts/views/todoItemView.js"></script>
+		<script src="/scripts/app.js"></script>
+  </body>
+</html>

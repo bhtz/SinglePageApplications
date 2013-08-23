@@ -1,0 +1,16 @@
+body {
+  text-align: center;
+}
+body .container {
+  margin: auto;
+  width: 80%;
+}
+.margin-left-5 {
+  margin-left: 5px;
+}
+.graybg {
+  background-color: #eee;
+}
+.clear {
+  clear: both;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html ng-app="todoApp">
+  <head>
+    <title>AngularJS TODO APP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/styles/app.css' />
+    <link rel='stylesheet' href='/styles/bootstrap.css' />
+  </head>
+  <body>
+
+  		<div class="container">
+
+	  	    <div class="navbar navbar-inverse">
+				<div class="navbar-inner">
+					<a class="brand" href="#">AngularJS Todo app</a>
+					<ul class="nav">
+						<li><a href="#docs/">Docs</a></li>
+						<li><a href="#aboutModal" data-toggle="modal">About</a></li>
+					</ul>
+				</div>
+	    	</div>
+
+	    	<div class="hero-unit">
+				<h1>AngularJS rocks !!!</h1>
+				<p class="text-info">Another todo app with angularjs & nodejs api</p>
+				<a href="http://angularjs.org/" class="btn btn-large btn-danger">See website</a>
+			</div>
+
+			<div ng-view></div>
+
+    	</div>
+
+    	<div id="aboutModal" class="modal hide fade" tabindex="-1" role="dialog">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				<h3 id="myModalLabel">About</h3>
+			</div>
+			<div class="modal-body">
+				<p>AngularJS todo application - Almerys - Orange Business Service 2013</p>
+			</div>
+			<div class="modal-footer">
+				<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+			</div>
+		</div>
+
+		<!-- vendors -->
+    	<script src="/scripts/vendors/angular.min.js"></script>
+
+    	<!-- only for bootstrap modal :( -->
+    	<script src="/scripts/vendors/jquery.js"></script>
+    	<script src="/scripts/vendors/bootstrap.min.js"></script>
+
+		<!-- librairies -->
+		<script src="/scripts/app.js"></script>
+		<script src="/scripts/router.js"></script>
+		<script src="/scripts/controllers/todoController.js"></script>
+		<script src="/scripts/controllers/docsController.js"></script>
+		<script src="/scripts/services/todoService.js"></script>
+  </body>
+</html>
