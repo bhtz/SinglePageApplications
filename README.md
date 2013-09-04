@@ -17,7 +17,7 @@ Server side
 -----------
 
 * JavaScript => Nodejs / express.js.
-* Java => JSP/Servlets.
 * Ruby => Ruby On Rails.
+* PHP => Slim Framework.
+* Java => JSP/Servlets.
 * C# => ASP MVC (soon).
-* PHP => Slim (soon).
