@@ -1,6 +1,6 @@
 <?php
 
-class Todo extends ActiveRecord\Model 
+class Todo extends ActiveRecord\Model
 {
 
 }
